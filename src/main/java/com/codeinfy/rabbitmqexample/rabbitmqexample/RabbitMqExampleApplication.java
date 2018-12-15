@@ -13,9 +13,8 @@ public class RabbitMqExampleApplication {
 		SpringApplication.run(RabbitMqExampleApplication.class, args);
 	}
 	
-	@StreamListener(target = "eventFetchChannel")
+	@StreamListener(target = EventChannelSource.Input)
 	public void getGeneratedEvent(EventGenerate eventGenerate) {
 		System.out.println("Event name is  " + eventGenerate.getEventName());
-		System.out.println("Event id  is  " + eventGenerate.getEventId());
 	}
 }

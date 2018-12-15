@@ -23,7 +23,7 @@ public class EventGenerateController {
 	
 	@PostMapping("/generate")
 	public String generateEvent(@RequestBody EventGenerate eventGenerate) {
-		eventChannelSource.eventRegestrationChannel().send(MessageBuilder.withPayload(eventGenerate).build());
+  		eventChannelSource.eventRegestrationChannel().send(MessageBuilder.withPayload(eventGenerate).build());
 		System.out.println("id"+ eventGenerate.getEventId()+"name"+eventGenerate.getEventName());
 		return "Generated an event";
 	}

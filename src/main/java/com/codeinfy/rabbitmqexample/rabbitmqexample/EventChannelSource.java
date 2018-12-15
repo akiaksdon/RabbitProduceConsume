@@ -7,6 +7,7 @@ import org.springframework.messaging.SubscribableChannel;
 
 public interface EventChannelSource {
 
+	 String Input = "eventFetchChannel";
 	 
 	@Output("eventRegestrationChannel")
 	 MessageChannel eventRegestrationChannel();
